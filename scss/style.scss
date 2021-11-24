@@ -228,6 +228,7 @@ nav {
   width: 100%;
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
+  z-index: 100;
 }
 
 .fixed-nav .links a {
@@ -264,13 +265,11 @@ nav {
 }
 
 .links-container {
-  height: 0;
-  overflow: hidden;
   transition: var(--transition);
 }
 
-.show-links {
-  height: 200px;
+.links {
+  display: none;
 }
 
 .links a {
@@ -471,8 +470,10 @@ footer p {
 }
 
 .products {
+  padding: 2em 0;
+
   &-title {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 1.5rem;
   }
 }
@@ -486,73 +487,56 @@ Slider
 .slider-container {
   width: 80vw;
   margin: 0 auto;
-  height: 200px;
   max-width: 80rem;
-  position: relative;
-  overflow: hidden;
   margin-top: 1rem;
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--clr-primary-9);
-  color: var(--clr-white);
-  display: grid;
-  place-items: center;
-  transition: all 0.25s ease-in-out;
-  text-align: center;
-}
+.slider {
+  &-inner {
+    position: relative;
+    height: 300px;
 
-.slide-img {
-  height: 100%;
-  object-fit: cover;
-}
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.slide h3 {
-  font-size: 1.5rem;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 1rem;
-  color: var(--clr-white);
-  background-color: rgba(0, 0, 0, 0.5);
-}
+    h3 {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      padding: 1em;
+      margin: 0;
+      color: #fff;
+    }
+  }
 
-.btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.75rem;
-}
+  &-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
 
-.prevBtn,
-.nextBtn {
-  position: absolute;
-  top: 50%;
+    path {
+      fill: #fff;
+    }
+  }
 
-  width: 40px;
-  height: 40px;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: white;
-  border-color: transparent;
-  font-size: 1.75rem;
-  cursor: pointer;
-  transition: var(--transition);
-}
+  &-prev {
+    left: 30px;
+  }
 
-.prevBtn {
-  left: 30px;
-}
-
-.nextBtn {
-  right: 30px;
+  &-next {
+    right: 30px;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -638,9 +622,14 @@ Slider
   .container p {
     max-width: 40rem;
   }
-}
+
+//   .slider-inner {
+//     height: 400px;}
+      
+// }
 
 @media screen and (min-width: 800px) {
+  
   h1 {
     font-size: 4rem;
   }
@@ -694,7 +683,7 @@ Slider
   }
 
   .links {
-    display: flex;
+    display: flex !important;
   }
 
   .links a {

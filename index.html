@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scroll-JQ</title>
+  <title>Scroll-JQuery</title>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/jquery.beefup.css">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -112,19 +114,10 @@
       <h2>our <span>services</span></h2>
     </div>
     <div class="section-center services-center">
-      <article class="toggle">
-        <div class="toggle-title">
-          <p>Super Cool Service</p>
-          <button type="button" class="toggle-btn">
-            <span class="toggle-plus-icon">
-              <i class="far fa-plus-square"></i>
-            </span>
-            <span class="toggle-minus-icon">
-              <i class="far fa-minus-square"></i>
-            </span>
-          </button>
-        </div>
-        <div class="toggle-text">
+
+      <article class="beefup">
+        <p class="beefup__head">Super Cool Service</p>
+        <div class="beefup__body">
           <p>
             Super Cool Service Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat perferendis
             esse ut consequatur mollitia ullam ratione in commodi? Veritatis rerum quo quod ipsam dicta. Nisi temporibus
@@ -132,88 +125,53 @@
           </p>
         </div>
       </article>
-      <article class="toggle">
-        <div class="toggle-title">
-          <p>Amazing Cheapest Stuff</p>
-          <button type="button" class="toggle-btn">
-            <span class="toggle-plus-icon">
-              <i class="far fa-plus-square"></i>
-            </span>
-            <span class="toggle-minus-icon">
-              <i class="far fa-minus-square"></i>
-            </span>
-          </button>
-        </div>
-        <div class="toggle-text">
+
+      <article class="beefup">
+        <p class="beefup__head">Amazing Cheapest Stuff</p>
+        <div class="beefup__body">
           <p>
-            Amazing Cheapest Stuff Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id eveniet nisi,
-            consequuntur tempore vel perferendis, repellendus sint ea delectus labore dolorem voluptatem suscipit iusto
-            est eligendi impedit, expedita illo libero?
-          </p>
-        </div>
-      </article>
-      <article class="toggle">
-        <div class="toggle-title">
-          <p>One More Interesting Service</p>
-          <button type="button" class="toggle-btn">
-            <span class="toggle-plus-icon">
-              <i class="far fa-plus-square"></i>
-            </span>
-            <span class="toggle-minus-icon">
-              <i class="far fa-minus-square"></i>
-            </span>
-          </button>
-        </div>
-        <div class="toggle-text">
-          <p>
-            One More Interesting Service Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
-            dolore illo dolores quia nemo doloribus quaerat, magni numquam
-            repellat reprehenderit.
+            Super Cool Service Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat perferendis
+            esse ut consequatur mollitia ullam ratione in commodi? Veritatis rerum quo quod ipsam dicta. Nisi temporibus
+            repellendus sapiente sed!
           </p>
         </div>
       </article>
   </section>
 
-  <section id="products" class="section">
+  <section id="products" class="section products">
     <div class="title products-title">
       <h2>Our Featured <span>products</span></h2>
     </div>
 
     <div class="slider-container">
 
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1525598912003-663126343e1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          class="slide-img" alt="" />
-        <h3>Product One Title</h3>
+      <div class="slider">
+        <div class="slider-item">
+          <div class="slider-inner">
+            <img
+              src="https://images.unsplash.com/photo-1525598912003-663126343e1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              class="slide-img" alt="" />
+            <h3>Product One Title</h3>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-inner">
+            <img
+              src="https://images.unsplash.com/photo-1634698046213-54daa6bf25ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80"
+              class="slide-img" alt="" />
+            <h3>Product Two</h3>
+          </div>
+        </div>
+        <div class="slider-item">
+          <div class="slider-inner">
+            <img
+              src="https://images.unsplash.com/photo-1636857686493-e4342ef6d62b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=875&q=80"
+              class="slide-img" alt="" />
+            <h3>Product Three</h3>
+          </div>
+        </div>
       </div>
-
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=869&q=80"
-          class="slide-img" alt="" />
-        <h3>Another Product Title</h3>
-      </div>
-
-      <div class="slide">
-        <img
-          src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=867&q=80"
-          class="slide-img" alt="" />
-        <h3>One More Product Title</h3>
-      </div>
-
-      <div class="btn-container">
-        <button type="button" class="prevBtn">
-          &lt;
-        </button>
-        <button type="button" class="nextBtn">
-          &gt;
-        </button>
-      </div>
-
     </div>
-
-
 
   </section>
 
@@ -227,7 +185,10 @@
     <i class="fas fa-arrow-up"></i>
   </a>
 
-  <script src="js/jq/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.beefup.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/moment-with-locales.js"></script>
   <script src="js/app.js"></script>
 </body>
 
